@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/cmake_install.cmake",
+		"/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/turtlebot3_msgs__py/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

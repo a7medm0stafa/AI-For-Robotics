@@ -1,0 +1,1 @@
+/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/rosidl_generator_py/turtlebot3_msgs/srv/_goal_s.c

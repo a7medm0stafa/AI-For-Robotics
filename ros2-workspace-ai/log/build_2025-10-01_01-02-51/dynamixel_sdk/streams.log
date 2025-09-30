@@ -1,0 +1,140 @@
+[0.020s] Invoking command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/DynamixelSDK/ros/dynamixel_sdk -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk
+[0.031s] [0mCMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[0.031s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.031s]   CMake.
+[0.031s] 
+[0.031s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.031s]   to tell CMake that the project requires at least <min> but has been updated
+[0.031s]   to work with policies introduced by <max> or earlier.
+[0.031s] 
+[0.031s] [0m
+[0.066s] -- The C compiler identification is GNU 11.4.0
+[0.117s] -- The CXX compiler identification is GNU 11.4.0
+[0.125s] -- Detecting C compiler ABI info
+[0.170s] -- Detecting C compiler ABI info - done
+[0.181s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.181s] -- Detecting C compile features
+[0.181s] -- Detecting C compile features - done
+[0.192s] -- Detecting CXX compiler ABI info
+[0.244s] -- Detecting CXX compiler ABI info - done
+[0.256s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.256s] -- Detecting CXX compile features
+[0.257s] -- Detecting CXX compile features - done
+[0.269s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.403s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.453s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.645s] -- Configuring done (0.6s)
+[0.650s] -- Generating done (0.0s)
+[0.651s] -- Build files have been written to: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk
+[0.662s] Invoked command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/DynamixelSDK/ros/dynamixel_sdk -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk
+[0.663s] Invoking command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk -- -j20 -l20
+[0.687s] [  7%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o[0m
+[0.688s] [ 15%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o[0m
+[0.688s] [ 23%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o[0m
+[0.688s] [ 30%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o[0m
+[0.688s] [ 38%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o[0m
+[0.689s] [ 46%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o[0m
+[0.689s] [ 53%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o[0m
+[0.689s] [ 61%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_handler.cpp.o[0m
+[0.689s] [ 69%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o[0m
+[0.689s] [ 69%] Built target ament_cmake_python_symlink_dynamixel_sdk
+[0.689s] [ 76%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o[0m
+[0.690s] [ 84%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_fast_sync_read.cpp.o[0m
+[0.690s] [ 92%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_fast_bulk_read.cpp.o[0m
+[0.700s] [100%] [32m[1mLinking CXX shared library libdynamixel_sdk.so[0m
+[0.775s] [100%] Built target dynamixel_sdk
+[0.851s] running egg_info
+[0.852s] creating dynamixel_sdk.egg-info
+[0.861s] writing dynamixel_sdk.egg-info/PKG-INFO
+[0.861s] writing dependency_links to dynamixel_sdk.egg-info/dependency_links.txt
+[0.861s] writing top-level names to dynamixel_sdk.egg-info/top_level.txt
+[0.861s] writing manifest file 'dynamixel_sdk.egg-info/SOURCES.txt'
+[0.889s] reading manifest file 'dynamixel_sdk.egg-info/SOURCES.txt'
+[0.889s] writing manifest file 'dynamixel_sdk.egg-info/SOURCES.txt'
+[0.908s] [100%] Built target ament_cmake_python_build_dynamixel_sdk_egg
+[0.913s] Invoked command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk -- -j20 -l20
+[0.914s] Invoking command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk
+[0.918s] -- Install configuration: ""
+[0.918s] -- Execute custom install script
+[0.919s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h
+[0.924s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h
+[0.927s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h
+[0.929s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_bulk_read.h
+[0.933s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_sync_read.h
+[0.936s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/group_handler.h
+[0.939s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h
+[0.943s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h
+[0.945s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h
+[0.948s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h
+[0.952s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h
+[0.955s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h
+[0.959s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h
+[0.962s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h
+[0.966s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h
+[0.970s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h
+[0.973s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/pythonpath.sh
+[0.977s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/pythonpath.dsv
+[0.980s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-3.8.4-py3.10.egg-info/PKG-INFO
+[0.984s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-3.8.4-py3.10.egg-info/SOURCES.txt
+[0.988s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-3.8.4-py3.10.egg-info/dependency_links.txt
+[0.991s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk-3.8.4-py3.10.egg-info/top_level.txt
+[0.994s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/__init__.py
+[0.997s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_read.cpp
+[1.001s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_read.py
+[1.004s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_write.cpp
+[1.007s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_write.py
+[1.009s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_fast_bulk_read.cpp
+[1.013s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_fast_sync_read.cpp
+[1.016s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_handler.cpp
+[1.019s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_read.cpp
+[1.022s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_read.py
+[1.025s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_write.cpp
+[1.028s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_write.py
+[1.031s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/packet_handler.cpp
+[1.033s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/packet_handler.py
+[1.036s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler.cpp
+[1.038s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler.py
+[1.041s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_arduino.cpp
+[1.044s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_linux.cpp
+[1.046s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_mac.cpp
+[1.049s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler_windows.cpp
+[1.052s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol1_packet_handler.cpp
+[1.055s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol1_packet_handler.py
+[1.058s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol2_packet_handler.cpp
+[1.061s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol2_packet_handler.py
+[1.064s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/robotis_def.py
+[1.067s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh
+[1.070s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv
+[1.073s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk
+[1.076s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk
+[1.079s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh
+[1.082s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv
+[1.085s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh
+[1.088s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv
+[1.090s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash
+[1.093s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh
+[1.096s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh
+[1.098s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv
+[1.102s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv
+[1.105s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk
+[1.109s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_targets-extras.cmake
+[1.112s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.116s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[1.119s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake
+[1.122s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake
+[1.126s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/package.xml
+[1.128s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/lib/libdynamixel_sdk.so
+[1.171s] Listing '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/__init__.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_read.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_bulk_write.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_read.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/group_sync_write.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/packet_handler.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/port_handler.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol1_packet_handler.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/protocol2_packet_handler.py'...
+[1.172s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages/dynamixel_sdk/robotis_def.py'...
+[1.176s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkExport.cmake
+[1.176s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkExport-noconfig.cmake
+[1.178s] Invoked command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk

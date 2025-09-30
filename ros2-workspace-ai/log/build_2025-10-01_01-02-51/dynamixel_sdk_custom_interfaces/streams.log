@@ -1,0 +1,276 @@
+[0.017s] Invoking command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/DynamixelSDK/ros/dynamixel_sdk_custom_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces
+[0.025s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.025s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.025s]   CMake.
+[0.025s] 
+[0.025s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.025s]   to tell CMake that the project requires at least <min> but has been updated
+[0.025s]   to work with policies introduced by <max> or earlier.
+[0.025s] 
+[0.025s] [0m
+[0.069s] -- The C compiler identification is GNU 11.4.0
+[0.130s] -- The CXX compiler identification is GNU 11.4.0
+[0.137s] -- Detecting C compiler ABI info
+[0.180s] -- Detecting C compiler ABI info - done
+[0.200s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.200s] -- Detecting C compile features
+[0.200s] -- Detecting C compile features - done
+[0.212s] -- Detecting CXX compiler ABI info
+[0.265s] -- Detecting CXX compiler ABI info - done
+[0.277s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.277s] -- Detecting CXX compile features
+[0.278s] -- Detecting CXX compile features - done
+[0.288s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.416s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.464s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.545s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.615s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.632s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.652s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.681s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.718s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.758s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.200s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.888s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.136s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.138s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[2.138s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.138s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.138s]   the cmake_policy command to set the policy and suppress this warning.
+[2.138s] 
+[2.138s] Call Stack (most recent call first):
+[2.138s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[2.138s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[2.138s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[2.138s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.138s] [0m
+[2.158s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6")
+[2.163s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.163s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[2.163s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.163s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.163s]   the cmake_policy command to set the policy and suppress this warning.
+[2.163s] 
+[2.163s] Call Stack (most recent call first):
+[2.164s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[2.164s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[2.164s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[2.164s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[2.164s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.164s] [0m
+[2.183s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[2.183s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.183s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.183s]   the cmake_policy command to set the policy and suppress this warning.
+[2.183s] 
+[2.183s] Call Stack (most recent call first):
+[2.183s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[2.183s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[2.183s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[2.183s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[2.183s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.183s] [0m
+[2.191s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5")
+[2.191s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.191s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.191s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.211s] -- Found PythonExtra: .so
+[2.252s] -- Configuring done (2.2s)
+[2.285s] -- Generating done (0.0s)
+[2.292s] -- Build files have been written to: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces
+[2.297s] Invoked command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/DynamixelSDK/ros/dynamixel_sdk_custom_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces
+[2.298s] Invoking command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces -- -j20 -l20
+[2.317s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.322s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.326s] [  5%] Built target ament_cmake_python_symlink_dynamixel_sdk_custom_interfaces
+[2.530s] [  5%] Built target dynamixel_sdk_custom_interfaces__cpp
+[2.533s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.533s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.534s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.565s] running egg_info
+[2.566s] creating dynamixel_sdk_custom_interfaces.egg-info
+[2.589s] writing dynamixel_sdk_custom_interfaces.egg-info/PKG-INFO
+[2.589s] writing dependency_links to dynamixel_sdk_custom_interfaces.egg-info/dependency_links.txt
+[2.589s] writing top-level names to dynamixel_sdk_custom_interfaces.egg-info/top_level.txt
+[2.589s] writing manifest file 'dynamixel_sdk_custom_interfaces.egg-info/SOURCES.txt'
+[2.675s] reading manifest file 'dynamixel_sdk_custom_interfaces.egg-info/SOURCES.txt'
+[2.676s] writing manifest file 'dynamixel_sdk_custom_interfaces.egg-info/SOURCES.txt'
+[2.696s] [ 15%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.c.o[0m
+[2.697s] [ 17%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.c.o[0m
+[2.717s] [ 17%] Built target ament_cmake_python_build_dynamixel_sdk_custom_interfaces_egg
+[2.785s] [ 20%] [32m[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so[0m
+[2.808s] [ 20%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c
+[2.812s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.813s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.813s] [ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.824s] [ 30%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dynamixel_sdk_custom_interfaces/msg/detail/dds_fastrtps/set_position__type_support.cpp.o[0m
+[2.824s] [ 33%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dynamixel_sdk_custom_interfaces/srv/detail/dds_fastrtps/get_position__type_support.cpp.o[0m
+[2.903s] [ 35%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o[0m
+[2.904s] [ 38%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o[0m
+[2.939s] [ 43%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.cpp.o[0m
+[2.939s] [ 43%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.cpp.o[0m
+[3.036s] [ 46%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o[0m
+[3.038s] [ 48%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o[0m
+[3.075s] [ 53%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.c.o[0m
+[3.075s] [ 53%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.c.o[0m
+[3.090s] [ 56%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so[0m
+[3.117s] [ 56%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c
+[3.121s] [ 58%] [32m[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.139s] [ 58%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c
+[3.159s] [ 61%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support_c.cpp.o[0m
+[3.159s] [ 64%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support_c.cpp.o[0m
+[3.278s] [ 66%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so[0m
+[3.313s] [ 66%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp
+[3.336s] [ 69%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.382s] [ 69%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.444s] [ 71%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.458s] [ 74%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.476s] [ 74%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp
+[3.506s] [ 74%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c
+[3.517s] [ 74%] Built target dynamixel_sdk_custom_interfaces
+[3.527s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.894s] [ 76%] Built target dynamixel_sdk_custom_interfaces__py
+[3.917s] [ 79%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c.o[0m
+[3.919s] [ 82%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c.o[0m
+[4.180s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so[0m
+[4.235s] [ 84%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_py
+[4.253s] [ 87%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.254s] [ 89%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.256s] [ 92%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[4.498s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.500s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.510s] [100%] [32m[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.530s] [100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.531s] [100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext
+[4.540s] [100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext
+[4.545s] Invoked command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces -- -j20 -l20
+[4.547s] Invoking command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces
+[4.550s] -- Install configuration: ""
+[4.550s] -- Execute custom install script
+[4.550s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces
+[4.554s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h
+[4.557s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h
+[4.561s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h
+[4.563s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.567s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_position.h
+[4.575s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h
+[4.583s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h
+[4.589s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h
+[4.595s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.h
+[4.602s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh
+[4.612s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv
+[4.619s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h
+[4.627s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.635s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h
+[4.642s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp
+[4.647s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp
+[4.652s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp
+[4.656s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.hpp
+[4.660s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[4.664s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_position.hpp
+[4.669s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp
+[4.672s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp
+[4.677s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp
+[4.680s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.hpp
+[4.685s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.hpp
+[4.694s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp
+[4.699s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.705s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp
+[4.711s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
+[4.716s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.721s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h
+[4.729s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp
+[4.735s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp
+[4.741s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh
+[4.752s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv
+[4.756s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.8.4-py3.10.egg-info/PKG-INFO
+[4.761s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.8.4-py3.10.egg-info/SOURCES.txt
+[4.766s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.8.4-py3.10.egg-info/dependency_links.txt
+[4.770s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.8.4-py3.10.egg-info/top_level.txt
+[4.774s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/__init__.py
+[4.777s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_c.c
+[4.782s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.786s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.788s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.792s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.798s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.804s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so
+[4.810s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py
+[4.831s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py
+[4.841s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c
+[4.851s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py
+[4.858s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py
+[4.865s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c
+[4.872s] -- Up-to-date symlink: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.873s] -- Up-to-date symlink: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.874s] -- Up-to-date symlink: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.874s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl
+[4.878s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl
+[4.883s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg
+[4.890s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv
+[4.892s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg
+[4.896s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg
+[4.900s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces
+[4.904s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces
+[4.907s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh
+[4.912s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv
+[4.917s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh
+[4.922s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv
+[4.928s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash
+[4.933s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh
+[4.937s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh
+[4.943s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv
+[4.947s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv
+[4.952s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces
+[4.956s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.961s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.966s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.971s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.976s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.981s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.984s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.988s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake
+[4.992s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake
+[4.996s] -- Symlinking: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml
+[5.000s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
+[5.000s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so" to ""
+[5.001s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so
+[5.001s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[5.001s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[5.001s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.001s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
+[5.001s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[5.001s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
+[5.001s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so" to ""
+[5.001s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
+[5.001s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[5.001s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
+[5.002s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so" to ""
+[5.036s] Listing '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces'...
+[5.036s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/__init__.py'...
+[5.036s] Listing '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg'...
+[5.036s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py'...
+[5.036s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py'...
+[5.036s] Listing '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv'...
+[5.036s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py'...
+[5.036s] Compiling '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py'...
+[5.041s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so
+[5.042s] -- Set non-toolchain portion of runtime path of "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so" to ""
+[5.042s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake
+[5.042s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.042s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.043s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.043s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake
+[5.043s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.043s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.043s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.044s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.044s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake
+[5.044s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.044s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.044s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.045s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake
+[5.045s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.045s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_pyExport.cmake
+[5.045s] -- Installing: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.048s] Invoked command in '/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces

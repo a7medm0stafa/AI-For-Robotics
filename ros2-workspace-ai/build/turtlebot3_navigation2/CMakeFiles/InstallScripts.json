@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_navigation2/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
