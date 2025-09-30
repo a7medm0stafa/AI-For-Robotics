@@ -1,0 +1,41 @@
+[0.028s] Invoking command in '/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description -- -j8 -l8
+[0.082s] Invoked command in '/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description -- -j8 -l8
+[0.097s] Invoking command in '/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description
+[0.109s] -- Install configuration: ""
+[0.109s] -- Execute custom install script
+[0.112s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/launch/model.launch.py
+[0.112s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/rviz/model.rviz
+[0.113s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/urdf/open_manipulator_x.urdf.xacro
+[0.113s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/urdf/turtlebot3_manipulation.urdf.xacro
+[0.113s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/urdf/turtlebot3_waffle_pi.urdf.xacro
+[0.113s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/open_manipulator_x/gripper_left_palm.stl
+[0.113s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/open_manipulator_x/gripper_right_palm.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/open_manipulator_x/link1.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/open_manipulator_x/link2.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/open_manipulator_x/link3.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/open_manipulator_x/link4.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/open_manipulator_x/link5.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/turtlebot3_waffle_pi/base.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/turtlebot3_waffle_pi/ladar.stl
+[0.114s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/turtlebot3_waffle_pi/left_tire.stl
+[0.115s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/meshes/turtlebot3_waffle_pi/right_tire.stl
+[0.115s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/ros2_control/turtlebot3_manipulation_system.ros2_control.xacro
+[0.115s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/gazebo/materials.xacro
+[0.116s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/gazebo/open_manipulator_x.gazebo.xacro
+[0.116s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/gazebo/turtlebot3_waffle_pi.gazebo.xacro
+[0.118s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/ament_index/resource_index/package_run_dependencies/turtlebot3_manipulation_description
+[0.118s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/ament_index/resource_index/parent_prefix_path/turtlebot3_manipulation_description
+[0.119s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/environment/ament_prefix_path.sh
+[0.127s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/environment/ament_prefix_path.dsv
+[0.128s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/environment/path.sh
+[0.128s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/environment/path.dsv
+[0.128s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/local_setup.bash
+[0.129s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/local_setup.sh
+[0.133s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/local_setup.zsh
+[0.133s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/local_setup.dsv
+[0.133s] -- Symlinking: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/package.dsv
+[0.136s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/ament_index/resource_index/packages/turtlebot3_manipulation_description
+[0.139s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/cmake/turtlebot3_manipulation_descriptionConfig.cmake
+[0.139s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/cmake/turtlebot3_manipulation_descriptionConfig-version.cmake
+[0.139s] -- Up-to-date symlink: /home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description/share/turtlebot3_manipulation_description/package.xml
+[0.147s] Invoked command in '/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description

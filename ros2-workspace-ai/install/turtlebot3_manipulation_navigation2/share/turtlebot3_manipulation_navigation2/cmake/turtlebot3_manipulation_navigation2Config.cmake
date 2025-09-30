@@ -1,0 +1,1 @@
+/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_navigation2/ament_cmake_core/turtlebot3_manipulation_navigation2Config.cmake

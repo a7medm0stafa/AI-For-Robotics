@@ -1,0 +1,6 @@
+[0.017s] Invoking command in '/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/zuma/AI-For-Robotics/ros2-workspace-ai/src/turtlebot3_manipulation/turtlebot3_manipulation_description -DCMAKE_INSTALL_PREFIX=/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_description
+[0.032s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.167s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.257s] -- Configuring done
+[0.260s] -- Generating done
+[0.261s] -- Build files have been written to: /home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_description

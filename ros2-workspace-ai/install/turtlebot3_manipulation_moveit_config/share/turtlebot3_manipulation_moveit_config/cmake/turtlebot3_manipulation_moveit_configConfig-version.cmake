@@ -1,0 +1,1 @@
+/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_moveit_config/ament_cmake_core/turtlebot3_manipulation_moveit_configConfig-version.cmake
