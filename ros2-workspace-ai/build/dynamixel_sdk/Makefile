@@ -211,17 +211,17 @@ dynamixel_sdk/fast:
 .PHONY : dynamixel_sdk/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_dynamixel_sdk
+# Target rules for targets named ament_cmake_python_copy_dynamixel_sdk
 
 # Build rule for target.
-ament_cmake_python_symlink_dynamixel_sdk: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_dynamixel_sdk
-.PHONY : ament_cmake_python_symlink_dynamixel_sdk
+ament_cmake_python_copy_dynamixel_sdk: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_dynamixel_sdk
+.PHONY : ament_cmake_python_copy_dynamixel_sdk
 
 # fast build rule for target.
-ament_cmake_python_symlink_dynamixel_sdk/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_dynamixel_sdk.dir/build.make CMakeFiles/ament_cmake_python_symlink_dynamixel_sdk.dir/build
-.PHONY : ament_cmake_python_symlink_dynamixel_sdk/fast
+ament_cmake_python_copy_dynamixel_sdk/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_dynamixel_sdk.dir/build.make CMakeFiles/ament_cmake_python_copy_dynamixel_sdk.dir/build
+.PHONY : ament_cmake_python_copy_dynamixel_sdk/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_dynamixel_sdk_egg
@@ -538,7 +538,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_dynamixel_sdk_egg"
-	@echo "... ament_cmake_python_symlink_dynamixel_sdk"
+	@echo "... ament_cmake_python_copy_dynamixel_sdk"
 	@echo "... dynamixel_sdk_uninstall"
 	@echo "... uninstall"
 	@echo "... dynamixel_sdk"

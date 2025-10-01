@@ -1,1 +1,0 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_teleop/ament_cmake_environment_hooks/local_setup.sh

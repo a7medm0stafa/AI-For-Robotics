@@ -1,1 +1,0 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/src/turtlebot3_manipulation/turtlebot3_manipulation_hardware/include/turtlebot3_manipulation_hardware/visibility_control.h

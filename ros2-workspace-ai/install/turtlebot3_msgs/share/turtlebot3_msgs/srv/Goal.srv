@@ -1,1 +1,4 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/turtlebot3_msgs/srv/Goal.srv
+---
+float32 pose_x
+float32 pose_y
+bool success

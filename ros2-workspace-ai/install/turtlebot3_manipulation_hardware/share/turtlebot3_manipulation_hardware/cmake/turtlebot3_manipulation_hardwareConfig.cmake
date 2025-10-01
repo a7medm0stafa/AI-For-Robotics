@@ -1,1 +1,0 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_hardware/ament_cmake_core/turtlebot3_manipulation_hardwareConfig.cmake

@@ -1,9 +1,0 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/uninstall.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/turtlebot3_simulations_uninstall.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/test.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/edit_cache.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/rebuild_cache.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/list_install_components.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/install.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/install/local.dir
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_simulations/CMakeFiles/install/strip.dir

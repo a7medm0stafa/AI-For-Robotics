@@ -1,1 +1,8 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/turtlebot3_msgs/action/Patrol.action
+# Define the goal
+geometry_msgs/Vector3 goal
+---
+# Define the result
+string result
+---
+# Define a feedback message
+string state

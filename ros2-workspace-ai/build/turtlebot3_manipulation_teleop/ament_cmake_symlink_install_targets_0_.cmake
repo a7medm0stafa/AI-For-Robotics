@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_teleop/turtlebot3_manipulation_teleop" "TARGETS" "turtlebot3_manipulation_teleop" "DESTINATION" "lib/turtlebot3_manipulation_teleop")
