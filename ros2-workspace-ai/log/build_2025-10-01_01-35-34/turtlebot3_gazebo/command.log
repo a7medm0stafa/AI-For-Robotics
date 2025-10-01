@@ -1,1 +1,0 @@
-Invoking command in '/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_gazebo -- -j8 -l8

@@ -1,1 +1,0 @@
-Invoking command in '/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_manipulation_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/zuma/AI-For-Robotics/ros2-workspace-ai/src/turtlebot3_manipulation/turtlebot3_manipulation_cartographer -DCMAKE_INSTALL_PREFIX=/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_manipulation_cartographer
