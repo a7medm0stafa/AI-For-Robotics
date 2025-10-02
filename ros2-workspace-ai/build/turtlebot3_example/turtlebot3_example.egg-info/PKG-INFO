@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: turtlebot3_example
 Version: 2.3.3
 Summary: Examples of Different TurtleBot3 Usage.
@@ -14,3 +14,12 @@ Classifier: Programming Language :: Python
 Classifier: Topic :: Software Development
 Requires-Dist: setuptools
 Requires-Dist: launch
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary
