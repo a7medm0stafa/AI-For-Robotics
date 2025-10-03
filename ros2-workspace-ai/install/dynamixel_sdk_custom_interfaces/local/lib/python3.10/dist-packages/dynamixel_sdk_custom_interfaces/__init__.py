@@ -1,0 +1,1 @@
+/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py/dynamixel_sdk_custom_interfaces/__init__.py

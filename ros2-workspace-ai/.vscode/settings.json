@@ -1,0 +1,28 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/project_enviroment",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/project_enviroment/lib/python3.10/site-packages",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages",
+        "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_teleop",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_example",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/project_enviroment",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/project_enviroment/lib/python3.10/site-packages",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/local/lib/python3.10/dist-packages",
+        "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_teleop",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_example",
+        "/home/zuma/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

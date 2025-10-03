@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_examples/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

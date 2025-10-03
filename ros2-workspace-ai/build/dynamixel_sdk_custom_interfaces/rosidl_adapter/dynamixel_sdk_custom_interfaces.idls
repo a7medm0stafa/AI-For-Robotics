@@ -1,2 +1,2 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/SetPosition.idl
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces:srv/GetPosition.idl
+/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/SetPosition.idl
+/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces:srv/GetPosition.idl

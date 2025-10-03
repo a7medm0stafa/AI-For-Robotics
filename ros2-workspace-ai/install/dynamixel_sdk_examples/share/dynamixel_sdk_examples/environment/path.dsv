@@ -1,1 +1,1 @@
-prepend-non-duplicate-if-exists;PATH;bin
+/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_examples/ament_cmake_environment_hooks/path.dsv

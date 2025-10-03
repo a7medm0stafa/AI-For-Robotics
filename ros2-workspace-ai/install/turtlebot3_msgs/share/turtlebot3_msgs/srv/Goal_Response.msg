@@ -1,4 +1,1 @@
-
-float32 pose_x
-float32 pose_y
-bool success
+/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/rosidl_cmake/srv/Goal_Response.msg
