@@ -1,1 +1,0 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/ament_cmake_core/turtlebot3_msgsConfig-version.cmake

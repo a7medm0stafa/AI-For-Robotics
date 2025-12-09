@@ -1,3 +1,0 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/lib/libdynamixel_sdk.so
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkExport.cmake
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkExport-noconfig.cmake

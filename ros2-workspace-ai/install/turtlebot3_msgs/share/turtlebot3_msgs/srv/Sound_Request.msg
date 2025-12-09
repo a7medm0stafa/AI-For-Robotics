@@ -1,1 +1,0 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/rosidl_cmake/srv/Sound_Request.msg

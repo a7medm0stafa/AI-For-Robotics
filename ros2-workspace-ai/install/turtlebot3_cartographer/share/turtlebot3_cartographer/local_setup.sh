@@ -1,1 +1,0 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_cartographer/ament_cmake_environment_hooks/local_setup.sh

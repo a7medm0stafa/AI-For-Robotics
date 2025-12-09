@@ -1,1 +1,0 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/turtlebot3_msgs/msg/SensorState.msg

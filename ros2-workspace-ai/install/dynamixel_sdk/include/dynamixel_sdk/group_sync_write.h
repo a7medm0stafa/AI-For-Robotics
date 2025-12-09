@@ -1,1 +1,0 @@
-/home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/DynamixelSDK/ros/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h
