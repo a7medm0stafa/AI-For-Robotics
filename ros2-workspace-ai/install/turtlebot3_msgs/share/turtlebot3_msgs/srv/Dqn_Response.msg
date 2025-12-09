@@ -1,1 +1,4 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/rosidl_cmake/srv/Dqn_Response.msg
+
+float32[] state
+float32 reward
+bool done

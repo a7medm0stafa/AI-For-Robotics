@@ -52,9 +52,9 @@ def generate_launch_description():
         'world',
         default=PathJoinSubstitution(
             [
-                FindPackageShare('turtlebot3_gazebo'),
+                FindPackageShare('tb3_planner_execution'),
                 'worlds',
-                'turtlebot3_house.world'
+                'my_house.world'
             ]
         )
     )

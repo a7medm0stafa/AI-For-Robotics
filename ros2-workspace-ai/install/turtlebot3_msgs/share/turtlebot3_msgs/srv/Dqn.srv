@@ -1,1 +1,6 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/src/turtlebot3_msgs/srv/Dqn.srv
+uint8 action
+bool init
+---
+float32[] state
+float32 reward
+bool done

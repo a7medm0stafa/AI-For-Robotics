@@ -1,6 +1,0 @@
-(move livingroom garden)
-(pick chewy garden)
-(move garden livingroom)
-(move livingroom cinemaroom)
-(place chewy cinemaroom)
-; cost = 5 (unit cost)

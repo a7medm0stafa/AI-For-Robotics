@@ -12,8 +12,8 @@ set_target_properties(turtlebot3_msgs::turtlebot3_msgs__rosidl_typesupport_intro
   IMPORTED_SONAME_NOCONFIG "libturtlebot3_msgs__rosidl_typesupport_introspection_cpp.so"
   )
 
-list(APPEND _IMPORT_CHECK_TARGETS turtlebot3_msgs::turtlebot3_msgs__rosidl_typesupport_introspection_cpp )
-list(APPEND _IMPORT_CHECK_FILES_FOR_turtlebot3_msgs::turtlebot3_msgs__rosidl_typesupport_introspection_cpp "${_IMPORT_PREFIX}/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_cpp.so" )
+list(APPEND _cmake_import_check_targets turtlebot3_msgs::turtlebot3_msgs__rosidl_typesupport_introspection_cpp )
+list(APPEND _cmake_import_check_files_for_turtlebot3_msgs::turtlebot3_msgs__rosidl_typesupport_introspection_cpp "${_IMPORT_PREFIX}/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_cpp.so" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

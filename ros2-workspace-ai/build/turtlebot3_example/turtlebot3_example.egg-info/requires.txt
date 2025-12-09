@@ -1,2 +1,2 @@
-launch
 setuptools
+launch

@@ -1,1 +1,3 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Request.msg
+# Constants
+# Request
+uint8 id

@@ -1,1 +1,0 @@
-/home/zuma/AI-For-Robotics/ros2-workspace-ai/build/turtlebot3_msgs/rosidl_generator_py/turtlebot3_msgs/__init__.py
