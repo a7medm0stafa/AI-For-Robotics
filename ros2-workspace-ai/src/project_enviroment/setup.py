@@ -46,8 +46,10 @@ setup(
     license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [
-           ' grip_ctrl = project_enviroment.grip_ctrl:main',
-        ],
-    }
+    'console_scripts': [
+        'grip_ctrl = project_enviroment.grip_ctrl:main',
+        'arm_ctrl = project_enviroment.arm_ctrl:main',
+        'action_executor = project_enviroment.action_executor:main',
+    ],
+}
 )

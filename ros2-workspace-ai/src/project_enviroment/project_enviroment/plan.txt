@@ -1,0 +1,2 @@
+(pick cup kitchen)
+(place cup bedroom)

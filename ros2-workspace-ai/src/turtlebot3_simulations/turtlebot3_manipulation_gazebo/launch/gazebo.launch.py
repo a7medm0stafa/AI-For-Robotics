@@ -54,7 +54,7 @@ def generate_launch_description():
             [
                 FindPackageShare('turtlebot3_gazebo'),
                 'worlds',
-                'turtlebot3_house.world'
+                'empty_world.world'
             ]
         )
     )
