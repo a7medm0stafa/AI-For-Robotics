@@ -47,7 +47,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'planner_executor = tb3_planner_execution.planner_executor_node:main',
+            'planner_executor = tb3_planner_execution.plan_executor_node:main',
             'move_executor = tb3_planner_execution.move_executor_node:main',
             'manip_executor = tb3_planner_execution.manip_executor_node:main',
             'TurtleBotMove = tb3_planner_execution.TurtleBotMove:main',

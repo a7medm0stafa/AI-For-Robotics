@@ -22,17 +22,17 @@ import shlex
 import sys
 
 # ------------------ Knowledge Base ------------------
-rooms = ["livingroom", "kitchen", "bedroom", "bathroom", "cinemaroom", "gamingroom", "garden"]
+rooms = ["livingroom", "diningroom", "bedroom", 
+         "storageroom", "studyroom", "door"]
 
 # connectivity as undirected edges (we will add both directions automatically)
 connectivity = {
-    ("livingroom", "kitchen"),
-    ("livingroom", "bedroom"),
-    ("livingroom", "bathroom"),
-    ("kitchen", "cinemaroom"),
-    ("bedroom", "gamingroom"),
-    ("livingroom", "cinemaroom"),
-    ("livingroom", "garden")  
+    ("livingroom", "door"),
+    ("livingroom", "diningroom"),
+    ("livingroom", "studyroom"),
+    ("diningroom", "storageroom"),
+    ("studyroom", "bedroom"),
+    
 }
 
 # objects -> initial room (note: remove leading/trailing spaces in room names)
