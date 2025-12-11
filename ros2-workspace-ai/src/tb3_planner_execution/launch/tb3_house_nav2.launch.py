@@ -51,7 +51,8 @@ def generate_launch_description():
 
     map_arg = DeclareLaunchArgument(
         'map',
-        default_value=os.path.join(pkg_share, 'maps', 'map.yaml'),
+        # Use the absolute path you know works
+        default_value='/home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/tb3_planner_execution/maps/map.yaml',
         description='Full path to map yaml file for Nav2'
     )
 
@@ -63,7 +64,7 @@ def generate_launch_description():
 
     start_rviz_arg = DeclareLaunchArgument(
         'start_rviz',
-        default_value='true',
+        default_value='false',
         description='Whether to start RViz2'
     )
 
@@ -82,30 +83,30 @@ def generate_launch_description():
         }.items()
     )
 
-    # Include Nav2 bringup with your map
-    nav2_launch = IncludeLaunchDescription(
+
+
+    tb3_nav_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             PathJoinSubstitution([
-                FindPackageShare('nav2_bringup'),
+                FindPackageShare('turtlebot3_navigation2'),
                 'launch',
-                'bringup_launch.py'
+                'navigation2.launch.py'
             ])
         ]),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
             'map': LaunchConfiguration('map'),
-            'params_file': LaunchConfiguration('params_file'),
         }.items()
     )
 
     # Static transform: odom -> base_footprint (simple identity transform)
-    static_odom_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_odom_to_base',
-        arguments=['0', '0', '0', '0', '0', '0', 'odom', 'base_footprint'],
-        output='screen'
-    )
+    # static_odom_tf = Node(
+    #     package='tf2_ros',
+    #     executable='static_transform_publisher',
+    #     name='static_odom_to_base',
+    #     arguments=['0', '0', '0', '0', '0', '0', 'odom', 'base_footprint'],
+    #     output='screen'
+    # )
 
     # Build launch description
     ld = LaunchDescription()
@@ -122,9 +123,9 @@ def generate_launch_description():
 
     # Add includes
     ld.add_action(gazebo_launch)
-    ld.add_action(nav2_launch)
+    ld.add_action(tb3_nav_launch)
 
     # Add static transform node
-    ld.add_action(static_odom_tf)
+    # ld.add_action(static_odom_tf)
 
     return ld
