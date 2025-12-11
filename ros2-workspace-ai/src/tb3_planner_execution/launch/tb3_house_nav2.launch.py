@@ -56,11 +56,11 @@ def generate_launch_description():
         description='Full path to map yaml file for Nav2'
     )
 
-    params_arg = DeclareLaunchArgument(
-        'params_file',
-        default_value=os.path.join(pkg_share, 'config', 'nav2_params.yaml'),
-        description='Full path to Nav2 parameters file'
-    )
+    # params_arg = DeclareLaunchArgument(
+    #     'params_file',
+    #     default_value=os.path.join(pkg_share, 'config', 'nav2_params.yaml'),
+    #     description='Full path to Nav2 parameters file'
+    # )
 
     start_rviz_arg = DeclareLaunchArgument(
         'start_rviz',
@@ -96,6 +96,7 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
             'map': LaunchConfiguration('map'),
+            # 'params_file': LaunchConfiguration('params_file'),
         }.items()
     )
 
@@ -118,7 +119,8 @@ def generate_launch_description():
     ld.add_action(world_arg)
     ld.add_action(use_sim_time_arg)
     ld.add_action(map_arg)
-    ld.add_action(params_arg)
+
+
     ld.add_action(start_rviz_arg)
 
     # Add includes
