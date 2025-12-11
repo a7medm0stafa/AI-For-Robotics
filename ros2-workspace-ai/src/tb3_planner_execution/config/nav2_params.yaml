@@ -12,7 +12,7 @@ amcl:
     base_frame_id: "base_footprint"
     global_frame_id: "map"
     odom_frame_id: "odom"
-    scan_topic: "scan"
+    scan_topic: "/scan"
     initial_pose:
       x: 0.0
       y: 0.0

@@ -9,6 +9,7 @@ from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetE
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.substitutions import FindPackageShare
+from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 import os
 
@@ -97,6 +98,15 @@ def generate_launch_description():
         }.items()
     )
 
+    # Static transform: odom -> base_footprint (simple identity transform)
+    static_odom_tf = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_odom_to_base',
+        arguments=['0', '0', '0', '0', '0', '0', 'odom', 'base_footprint'],
+        output='screen'
+    )
+
     # Build launch description
     ld = LaunchDescription()
 
@@ -113,5 +123,8 @@ def generate_launch_description():
     # Add includes
     ld.add_action(gazebo_launch)
     ld.add_action(nav2_launch)
+
+    # Add static transform node
+    ld.add_action(static_odom_tf)
 
     return ld
