@@ -1,0 +1,13 @@
+{
+  "robot_location": "livingroom",
+  "holding": null,
+  "objects": {
+    "cup": "diningroom",
+    "book": "studyroom",
+    "remote": "livingroom",
+    "phone": "livingroom",
+    "panadol": "bedroom",
+    "pillow": "bedroom",
+    "chewy": "storageroom"
+  }
+}
