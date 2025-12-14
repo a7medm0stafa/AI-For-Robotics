@@ -1,3 +1,18 @@
-build/
-install/
-log/
+# ROS 2 build artifacts
+ros2-workspace-ai/build/
+ros2-workspace-ai/install/
+ros2-workspace-ai/log/
+
+# Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.swp
+*.swo
