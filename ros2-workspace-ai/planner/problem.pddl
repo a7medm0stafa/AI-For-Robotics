@@ -2,14 +2,14 @@
   (:domain apartment)
 
   (:objects
-    livingroom kitchen bedroom bathroom cinemaroom gamingroom garden cup book remote towel phone panadol pillow freshbuzz popcorn ps5controller chewy
+    livingroom diningroom bedroom storageroom studyroom door cup book remote phone panadol pillow chewy
   )
 
   (:init
-    (room livingroom) (room kitchen) (room bedroom) (room bathroom) (room cinemaroom) (room gamingroom) (room garden) (object cup) (object book) (object remote) (object towel) (object phone) (object panadol) (object pillow) (object freshbuzz) (object popcorn) (object ps5controller) (object chewy) (robot-at cinemaroom) (empty-hand) (in-room cup kitchen) (in-room book bedroom) (in-room remote livingroom) (in-room towel bathroom) (in-room phone livingroom) (in-room panadol cinemaroom) (in-room pillow bedroom) (in-room freshbuzz bathroom) (in-room popcorn cinemaroom) (in-room ps5controller gamingroom) (in-room chewy garden) (connected livingroom garden) (connected garden livingroom) (connected livingroom cinemaroom) (connected cinemaroom livingroom) (connected livingroom bedroom) (connected bedroom livingroom) (connected livingroom kitchen) (connected kitchen livingroom) (connected livingroom bathroom) (connected bathroom livingroom) (connected bedroom gamingroom) (connected gamingroom bedroom) (connected kitchen cinemaroom) (connected cinemaroom kitchen)
+    (room livingroom) (room diningroom) (room bedroom) (room storageroom) (room studyroom) (room door) (object cup) (object book) (object remote) (object phone) (object panadol) (object pillow) (object chewy) (robot-at livingroom) (empty-hand) (in-room cup diningroom) (in-room book studyroom) (in-room remote livingroom) (in-room phone livingroom) (in-room panadol bedroom) (in-room pillow bedroom) (in-room chewy storageroom) (connected studyroom bedroom) (connected bedroom studyroom) (connected diningroom storageroom) (connected storageroom diningroom) (connected livingroom studyroom) (connected studyroom livingroom) (connected livingroom diningroom) (connected diningroom livingroom) (connected livingroom door) (connected door livingroom)
   )
 
   (:goal
-    (in-room chewy kitchen)
+    (robot-at diningroom)
   )
 )
