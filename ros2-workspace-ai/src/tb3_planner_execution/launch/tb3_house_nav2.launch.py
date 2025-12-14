@@ -93,11 +93,11 @@ def generate_launch_description():
                 'navigation2.launch.py'
             ])
         ]),
-        launch_arguments={
-            'use_sim_time': LaunchConfiguration('use_sim_time'),
-            'map': LaunchConfiguration('map'),
-            # 'params_file': LaunchConfiguration('params_file'),
-        }.items()
+        # launch_arguments={
+        #     'use_sim_time': LaunchConfiguration('use_sim_time'),
+        #     #'map': LaunchConfiguration('map'),
+        #     # 'params_file': LaunchConfiguration('params_file'),
+        # }.items()
     )
 
     # Static transform: odom -> base_footprint (simple identity transform)

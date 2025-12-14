@@ -17,12 +17,12 @@ class MoveNode(Node):
         # Room coordinates - Position only (x, y)
         # Orientation will be set dynamically based on approach direction
         self.room_coordinates = {
-            "diningroom": (5.5, 5.0, 1.5708),
-            "storageroom": (7.3 , -1.8, 0.0),
-            "livingroom": (-2.0, 5.0, 1.5708),
-            "door": (2.0, 0.15 , 1.5708),
-            "studyroom": (-5.20, 4.5, 1.5708),
-            "bedroom": (-4.8, -1.45, 0.0)
+            "diningroom": (4.8, 1.3),
+            "storageroom": (5.55, -2.8),
+            "livingroom": (-2.65, 1.0),
+            "bathroom": (0.9, 3.2),
+            "studyroom": (-6.0, 3.0),
+            "bedroom": (-6.3, -0.45)
         }
 
         # Publishers
@@ -61,8 +61,8 @@ class MoveNode(Node):
             pose_msg = PoseStamped()
             pose_msg.header.stamp = self.get_clock().now().to_msg()
             pose_msg.header.frame_id = 'map'
-            pose_msg.pose.position.x = self.x
-            pose_msg.pose.position.y = self.y
+            pose_msg.pose.position.x = self.x 
+            pose_msg.pose.position.y = self.y 
             pose_msg.pose.position.z = 0.0
             pose_msg.pose.orientation = self.q
             self.position_pub.publish(pose_msg)
@@ -138,8 +138,8 @@ class MoveNode(Node):
         goal_msg = NavigateToPose.Goal()
         goal_msg.pose.header.frame_id = 'map'
         goal_msg.pose.header.stamp = self.get_clock().now().to_msg()
-        goal_msg.pose.pose.position.x = x
-        goal_msg.pose.pose.position.y = y
+        goal_msg.pose.pose.position.x = x + 2.0
+        goal_msg.pose.pose.position.y = y + 0.5
         goal_msg.pose.pose.position.z = 0.0
 
         # Convert yaw to quaternion
