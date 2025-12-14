@@ -1,2 +1,3 @@
 (move livingroom diningroom)
-; cost = 1 (unit cost)
+(move diningroom bathroom)
+; cost = 2 (unit cost)

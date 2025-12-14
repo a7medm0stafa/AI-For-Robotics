@@ -20,14 +20,14 @@ from std_msgs.msg import Bool
 
 # ------------------ Knowledge Base ------------------
 rooms = ["livingroom", "diningroom", "bedroom", 
-         "storageroom", "studyroom", "door"]
+         "storageroom", "studyroom", "bathroom"]
 
 # connectivity as undirected edges (we will add both directions automatically)
 connectivity = {
-    ("livingroom", "door"),
     ("livingroom", "diningroom"),
     ("livingroom", "studyroom"),
     ("diningroom", "storageroom"),
+    ("diningroom", "bathroom"),
     ("studyroom", "bedroom"),
     
 }
