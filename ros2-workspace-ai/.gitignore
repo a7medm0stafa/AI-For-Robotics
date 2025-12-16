@@ -1,4 +1,115 @@
-# ROS 2 build artifacts
+# ROS 2 Build Artifacts
 build/
 install/
 log/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.manifest
+*.spec
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ROS specific
+*.autosave
+*.user
+*.pyc
+*.pyo
+
+# Fast Downward
+planner/output
+planner/output.sas
+planner/sas_plan*
+planner/*.log
+
+# Colcon
+.colcon/
+*.colcon_install_layout
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# C/C++
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+*.app
+
+# Gazebo
+*.world~
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Pytest
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ROS bags
+*.bag
+*.db3
+
+# URDF/xacro generated files
+*.urdf.xacro~
+
+# Maps
+*.pgm.backup
+*.yaml.backup
