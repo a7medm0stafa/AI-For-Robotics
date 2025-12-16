@@ -7,7 +7,8 @@ ros2 launch turtlebot3_manipulation_gazebo gazebo.launch.py
 
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=/home/ahmed/AI-For-Robotics/ros2-workspace-ai/src/tb3_planner_execution/maps/map.yaml
 
-3-initialize robot pose from rviz2 place in origin of map /TODO Sarah
+3-initialize robot pose from rviz2 place in origin of map 
+ros2 run tb3_planner_execution set_init_pose
 
 4- run turtlebotmove.py node 
 ros2 run tb3_planner_execution turtlebot_move
