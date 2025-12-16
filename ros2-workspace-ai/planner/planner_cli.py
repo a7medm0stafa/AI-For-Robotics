@@ -45,6 +45,7 @@ objects = {
 
 robot_location = "door"  # Robot spawns at the door
 holding = None
+gripper_state = "open"  # Track gripper state: "open" or "closed"
 
 # files
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

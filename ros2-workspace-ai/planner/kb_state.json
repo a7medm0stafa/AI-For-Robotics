@@ -1,6 +1,7 @@
 {
   "robot_location": "bathroom",
   "holding": null,
+  "gripper_state": "open",
   "objects": {
     "cup": "diningroom",
     "book": "studyroom",

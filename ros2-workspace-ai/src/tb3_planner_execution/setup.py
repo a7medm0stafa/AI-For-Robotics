@@ -50,6 +50,7 @@ setup(
             'planner_executor = tb3_planner_execution.plan_executor_node:main',
             'mock_services = tb3_planner_execution.mock_services_node:main',
             'turtlebot_move = tb3_planner_execution.TurtleBotMove:main',
+            'gripper_control = tb3_planner_execution.grip_ctrl:main',
         ],
     },
 )

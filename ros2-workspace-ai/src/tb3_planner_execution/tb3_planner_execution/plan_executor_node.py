@@ -45,13 +45,12 @@ class PlanExecutor(Node):
         # Use threading.Event instead of a boolean flag
         self._move_complete_event = threading.Event()
 
-        # Service clients (pick/place/KB) - optional for now
-        self.pick_client = self.create_client(Trigger, '/open_manipulator/pick')
-        self.place_client = self.create_client(Trigger, '/open_manipulator/place')
-        self.kb_update_client = self.create_client(Trigger, '/planner/kb_update')
+        # Service clients for gripper control
+        self.open_gripper_client = self.create_client(Trigger, 'open_gripper')
+        self.close_gripper_client = self.create_client(Trigger, 'close_gripper')
 
         # Flag to enable/disable service waiting
-        self.declare_parameter('wait_for_services', False)
+        self.declare_parameter('wait_for_services', True)  # Enable by default
         self.wait_for_services = self.get_parameter('wait_for_services').get_parameter_value().bool_value
 
         # Publish when plan execution finishes
@@ -88,25 +87,31 @@ class PlanExecutor(Node):
             if os.path.exists(KB_STATE_FILE):
                 with open(KB_STATE_FILE, 'r') as f:
                     data = json.load(f)
-                    return data.get("robot_location"), data.get("holding"), data.get("objects", {})
+                    return (
+                        data.get("robot_location"), 
+                        data.get("holding"), 
+                        data.get("objects", {}),
+                        data.get("gripper_state", "open")
+                    )
             else:
                 self.get_logger().warn(f'KB state file not found: {KB_STATE_FILE}')
-                return "livingroom", None, {}
+                return "livingroom", None, {}, "open"
         except Exception as e:
             self.get_logger().error(f'Failed to load KB state: {e}')
-            return "livingroom", None, {}
+            return "livingroom", None, {}, "open"
     
-    def _save_kb_state(self, robot_loc, holding, objects):
+    def _save_kb_state(self, robot_loc, holding, objects, gripper_state):
         """Save KB state to file after action execution."""
         try:
             data = {
                 "robot_location": robot_loc,
                 "holding": holding,
-                "objects": objects
+                "objects": objects,
+                "gripper_state": gripper_state
             }
             with open(KB_STATE_FILE, 'w') as f:
                 json.dump(data, f, indent=2)
-            self.get_logger().info(f'Saved KB: robot={robot_loc}, holding={holding}')
+            self.get_logger().info(f'Saved KB: robot={robot_loc}, holding={holding}, gripper={gripper_state}')
             return True
         except Exception as e:
             self.get_logger().error(f'Failed to save KB state: {e}')
@@ -115,9 +120,8 @@ class PlanExecutor(Node):
     def _apply_action_to_kb(self, action_name, args):
         """
         Apply an action to the KB and save the updated state.
-        This mimics apply_action_to_kb from planner_cli.py
         """
-        robot_loc, holding, objects = self._load_kb_state()
+        robot_loc, holding, objects, gripper_state = self._load_kb_state()
         
         if action_name == "move":
             # args: [from_room, to_room]
@@ -130,6 +134,7 @@ class PlanExecutor(Node):
                 holding = obj
                 if obj in objects:
                     objects[obj] = None
+                gripper_state = "closed"  # Gripper closes when picking
         elif action_name == "place":
             # args: [object, room]
             if len(args) >= 2:
@@ -137,9 +142,10 @@ class PlanExecutor(Node):
                 room = args[1]
                 objects[obj] = room
                 holding = None
+                gripper_state = "open"  # Gripper opens when placing
         
         # Save updated KB
-        self._save_kb_state(robot_loc, holding, objects)
+        self._save_kb_state(robot_loc, holding, objects, gripper_state)
         return True
 
     def _wait_for_servers(self):
@@ -148,13 +154,14 @@ class PlanExecutor(Node):
             return
             
         for name, client in [
-            ('pick', self.pick_client),
-            ('place', self.place_client),
-            ('kb_update', self.kb_update_client),
+            ('open_gripper', self.open_gripper_client),
+            ('close_gripper', self.close_gripper_client),
         ]:
             self.get_logger().info(f'Waiting for {name} service...')
-            client.wait_for_service()
-            self.get_logger().info(f'{name} service available.')
+            if not client.wait_for_service(timeout_sec=10.0):
+                self.get_logger().warn(f'{name} service not available after 10s')
+            else:
+                self.get_logger().info(f'{name} service available.')
 
     # === Callbacks ===
 
@@ -165,33 +172,12 @@ class PlanExecutor(Node):
             self.get_logger().info('Move completed! Setting event.')
             self._move_complete_event.set()
 
-    def _plan_ready_callback(self, msg: Bool):
-        """Triggered when planner publishes a new plan."""
-        if not msg.data:
-            return
-        
-        self.get_logger().info('Received plan_ready trigger! Loading and executing plan...')
-        
-        # Reload plan from file
-        self.actions = self._load_plan(self.plan_file)
-        self.get_logger().info(f'Loaded {len(self.actions)} actions from plan.')
-        
-        # Start execution in a separate thread
-        if self._execution_thread is not None and self._execution_thread.is_alive():
-            self.get_logger().warn('Execution already in progress, ignoring trigger.')
-            return
-        
-        self._execution_thread = threading.Thread(target=self._execute_plan)
-        self._execution_thread.start()
-
     def _load_plan(self, filepath):
         """
         Parse sas_plan of the form:
           (move cinemaroom livingroom)
           (pick chewy garden)
           (place chewy kitchen)
-        into:
-          {'name': 'move', 'args': ['cinemaroom', 'livingroom']}
         """
         actions = []
         try:
@@ -201,7 +187,6 @@ class PlanExecutor(Node):
                     if not line or line.startswith(';'):
                         continue
 
-                    # e.g. "(move cinemaroom livingroom)"
                     if line.startswith('(') and line.endswith(')'):
                         line = line[1:-1]
 
@@ -251,7 +236,6 @@ class PlanExecutor(Node):
         self.get_logger().info('='*60)
         self.get_logger().info('Plan execution finished. Ready for next plan.')
         self.get_logger().info('='*60)
-        # DON'T call rclpy.shutdown() here
         
         # Notify planner that execution is complete
         msg = Bool()
@@ -274,7 +258,7 @@ class PlanExecutor(Node):
         room_name = to_room.lower()
 
         self.get_logger().info(
-            f'MOVE: from \"{from_room}\" to \"{to_room}\" → navigating to \"{room_name}\"'
+            f'MOVE: from "{from_room}" to "{to_room}" → navigating to "{room_name}"'
         )
 
         # Clear the event before starting
@@ -304,33 +288,67 @@ class PlanExecutor(Node):
         return True
 
     def _exec_pick(self, args):
-        """Execute pick action - calls service if available, otherwise logs and continues."""
+        """Execute pick action - close gripper."""
+        if len(args) < 2:
+            self.get_logger().error(f'pick expects [object room], got {args}')
+            return False
+            
+        obj = args[0]
+        room = args[1]
+        
+        self.get_logger().info(f'PICK: object="{obj}" from room="{room}"')
+        
         if not self.wait_for_services:
-            self.get_logger().info(f'PICK action (skipped - services disabled): {args}')
+            self.get_logger().info('PICK action (gripper services disabled)')
             return True
             
+        # Call close_gripper service
         req = Trigger.Request()
-        future = self.pick_client.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
-        if not future.result() or not future.result().success:
-            self.get_logger().error(f'Pick action failed: {future.result()}')
+        future = self.close_gripper_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future, timeout_sec=10.0)
+        
+        if not future.done():
+            self.get_logger().error('Close gripper service call timed out')
             return False
-        self.get_logger().info('Pick action succeeded.')
+            
+        result = future.result()
+        if not result or not result.success:
+            self.get_logger().error(f'Close gripper failed: {result.message if result else "no response"}')
+            return False
+            
+        self.get_logger().info(f'✅ Gripper closed - picked {obj}')
         return True
 
     def _exec_place(self, args):
-        """Execute place action - calls service if available, otherwise logs and continues."""
+        """Execute place action - open gripper."""
+        if len(args) < 2:
+            self.get_logger().error(f'place expects [object room], got {args}')
+            return False
+            
+        obj = args[0]
+        room = args[1]
+        
+        self.get_logger().info(f'PLACE: object="{obj}" in room="{room}"')
+        
         if not self.wait_for_services:
-            self.get_logger().info(f'PLACE action (skipped - services disabled): {args}')
+            self.get_logger().info('PLACE action (gripper services disabled)')
             return True
             
+        # Call open_gripper service
         req = Trigger.Request()
-        future = self.place_client.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
-        if not future.result() or not future.result().success:
-            self.get_logger().error(f'Place action failed: {future.result()}')
+        future = self.open_gripper_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future, timeout_sec=10.0)
+        
+        if not future.done():
+            self.get_logger().error('Open gripper service call timed out')
             return False
-        self.get_logger().info('Place action succeeded.')
+            
+        result = future.result()
+        if not result or not result.success:
+            self.get_logger().error(f'Open gripper failed: {result.message if result else "no response"}')
+            return False
+            
+        self.get_logger().info(f'✅ Gripper opened - placed {obj} in {room}')
         return True
 
     def _update_kb(self, name, args, success: bool):
@@ -343,14 +361,6 @@ class PlanExecutor(Node):
         
         # Apply action to KB file
         self._apply_action_to_kb(name, args)
-        
-        # Optionally also call KB update service if enabled
-        if self.wait_for_services:
-            req = Trigger.Request()
-            future = self.kb_update_client.call_async(req)
-            rclpy.spin_until_future_complete(self, future)
-            if not future.result() or not future.result().success:
-                self.get_logger().warn('KB update service call failed or returned false.')
 
 
 def main(args=None):
