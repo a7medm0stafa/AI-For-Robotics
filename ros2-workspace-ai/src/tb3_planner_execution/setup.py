@@ -47,6 +47,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'set_init_pose = tb3_planner_execution.set_init_pose:main',
             'planner_executor = tb3_planner_execution.plan_executor_node:main',
             'mock_services = tb3_planner_execution.mock_services_node:main',
             'turtlebot_move = tb3_planner_execution.TurtleBotMove:main',
