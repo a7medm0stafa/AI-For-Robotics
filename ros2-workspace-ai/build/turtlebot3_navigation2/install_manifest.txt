@@ -1,3 +1,4 @@
+/home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2.launch.py
 /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/map.pgm
 /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/map.yaml
 /home/ahmed/AI-For-Robotics/ros2-workspace-ai/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle.yaml

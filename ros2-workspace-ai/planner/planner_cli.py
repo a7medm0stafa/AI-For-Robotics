@@ -43,7 +43,7 @@ objects = {
     "chewy": "storageroom"
 }
 
-robot_location = "door"  # Robot spawns at the door
+robot_location = "livingroom"  # Robot spawns at the door
 holding = None
 gripper_state = "open"  # Track gripper state: "open" or "closed"
 
@@ -60,7 +60,7 @@ KB_STATE_FILE = os.path.join(SCRIPT_DIR, "kb_state.json")
 
 def load_kb_from_file():
     """Load KB state from JSON file if it exists."""
-    global robot_location, holding, objects
+    global robot_location, holding, objects, gripper_state
     if os.path.exists(KB_STATE_FILE):
         try:
             with open(KB_STATE_FILE, 'r') as f:
@@ -68,6 +68,7 @@ def load_kb_from_file():
                 robot_location = data.get("robot_location", robot_location)
                 holding = data.get("holding", holding)
                 objects = data.get("objects", objects)
+                gripper_state = data.get("gripper_state", "open")
             print(f"Loaded KB from {KB_STATE_FILE}")
         except Exception as e:
             print(f"Warning: Failed to load KB from file: {e}")
@@ -78,12 +79,13 @@ def load_kb_from_file():
 
 def save_kb_to_file():
     """Save current KB state to JSON file."""
-    global robot_location, holding, objects
+    global robot_location, holding, objects, gripper_state
     try:
         data = {
             "robot_location": robot_location,
             "holding": holding,
-            "objects": objects
+            "objects": objects,
+            "gripper_state": gripper_state
         }
         with open(KB_STATE_FILE, 'w') as f:
             json.dump(data, f, indent=2)
@@ -93,9 +95,10 @@ def save_kb_to_file():
 
 def reset_kb_to_default():
     """Reset KB to default initial state."""
-    global robot_location, holding, objects
-    robot_location = "outside"  # Robot ACTUALLY spawns here
+    global robot_location, holding, objects, gripper_state
+    robot_location = "livingroom"  # Robot spawns in living room
     holding = None
+    gripper_state = "open"
     objects = {
         "cup": "diningroom",
         "book": "studyroom",
@@ -106,7 +109,7 @@ def reset_kb_to_default():
         "chewy": "storageroom"
     }
     save_kb_to_file()
-    print("KB reset to default state (robot at 'outside').")
+    print("✅ KB reset to default state (robot at 'livingroom', holding nothing, gripper open).")
 
 # Candidate fast-downward paths (keep FAST_DOWNWARD env var first)
 COMMON_FD_PATHS = [
@@ -366,7 +369,11 @@ def cli_loop():
     rclpy.init()
     planner_node = PlannerNode()
     
-    # Load KB from file at startup
+    # Auto-reset KB to default state on startup
+    print("\n🔄 Auto-resetting KB to default state...")
+    reset_kb_to_default()
+    
+    # Load KB from file at startup (will load the just-reset values)
     load_kb_from_file()
     
     ensure_domain_file()
