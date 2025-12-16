@@ -1,3 +1,4 @@
-(move diningroom bathroom)
-(place chewy bathroom)
-; cost = 2 (unit cost)
+(pick phone livingroom)
+(move livingroom studyroom)
+(place phone studyroom)
+; cost = 3 (unit cost)
