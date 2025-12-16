@@ -45,6 +45,8 @@ class MoveNode(Node):
         self.x = 0.0
         self.y = 0.0
         self.q = None
+        self._goal_handle = None
+        self._get_result_future = None
         
         self.get_logger().info("Move Node initialized.")
         self.get_logger().info("Available rooms: " + str(list(self.room_coordinates.keys())))
@@ -169,6 +171,7 @@ class MoveNode(Node):
             return
 
         self.get_logger().info('✅ Nav2 ACCEPTED, navigating...')
+        self._goal_handle = goal_handle  # Store for polling
         self._get_result_future = goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback)
 
@@ -177,23 +180,36 @@ class MoveNode(Node):
 
     def get_result_callback(self, future):
         """Handle navigation result."""
-        status = future.result().status
+        self.get_logger().info('🔔 get_result_callback triggered!')
         
+        result = future.result()
+        if result is None:
+            self.get_logger().error('❌ Result is None!')
+            msg = Bool()
+            msg.data = False
+            self.move_status_pub.publish(msg)
+            self.get_logger().info('📤 Published move_status=False (result None)')
+            return
+            
+        status = result.status
+        self.get_logger().info(f'Navigation status code: {status}')
+        
+        msg = Bool()
         if status == 4:  # SUCCEEDED
             self.get_logger().info(f'✅ SUCCESS! At ({self.x:.2f}, {self.y:.2f})')
-            msg = Bool()
             msg.data = True
             self.move_status_pub.publish(msg)
+            self.get_logger().info('📤 Published move_status=True')
         elif status == 6:  # ABORTED
             self.get_logger().error(f'❌ ABORTED! Nav2 could not find path')
-            msg = Bool()
             msg.data = False
             self.move_status_pub.publish(msg)
+            self.get_logger().info('📤 Published move_status=False (aborted)')
         else:
             self.get_logger().error(f'❌ FAILED! Status: {status}')
-            msg = Bool()
             msg.data = False
             self.move_status_pub.publish(msg)
+            self.get_logger().info(f'📤 Published move_status=False (status {status})')
 
 
 def main(args=None):

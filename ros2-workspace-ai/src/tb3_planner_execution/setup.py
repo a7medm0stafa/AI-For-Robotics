@@ -1,6 +1,5 @@
 from setuptools import find_packages, setup
 from glob import glob
-import os
 
 package_name = 'tb3_planner_execution'
 
@@ -12,43 +11,21 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        # Install launch files
-        ('share/' + package_name + '/launch', [
-            'launch/tb3_house_nav2.launch.py',
-        ]),
-        ('share/' + package_name + '/launch', [
-            'launch/gazebo.launch.py',
-        ]),
-        ('share/' + package_name + '/launch', [
-        'launch/base.launch.py',
-        ]),
-        # Install config files
-        ('share/' + package_name + '/config', [
-            'config/nav2_params.yaml',
-        ]),
-        # Install maps
-        ('share/' + package_name + '/maps', glob('maps/*')),
-        # Install worlds
+        ('share/' + package_name + '/launch', glob('launch/*.py')),
         ('share/' + package_name + '/worlds', glob('worlds/*.world')),
-        # Install models
-        ('share/' + package_name + '/models/tb3_house_custom', 
-            glob('models/tb3_house_custom/*')),
+        ('share/' + package_name + '/maps', glob('maps/*')),
+        ('share/' + package_name + '/config', glob('config/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='ahmed',
-    maintainer_email='ahm.mostafa03@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    maintainer_email='ahmed@todo.todo',
+    description='TurtleBot3 Planner Execution Package',
+    license='Apache-2.0',
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'planner_executor = tb3_planner_execution.plan_executor_node:main',
-            'mock_services = tb3_planner_execution.mock_services_node:main',
             'turtlebot_move = tb3_planner_execution.TurtleBotMove:main',
             'gripper_control = tb3_planner_execution.grip_ctrl:main',
         ],
