@@ -1,14 +1,14 @@
 {
-  "robot_location": "studyroom",
-  "holding": null,
+  "robot_location": "livingroom",
+  "holding": "chewy",
   "objects": {
     "cup": "diningroom",
     "book": "studyroom",
     "remote": "livingroom",
-    "phone": "studyroom",
+    "phone": "livingroom",
     "panadol": "bedroom",
     "pillow": "bedroom",
-    "chewy": "storageroom"
+    "chewy": null
   },
-  "gripper_state": "open"
+  "gripper_state": "closed"
 }

@@ -1,0 +1,51 @@
+# ROS 2 Workspace
+ros2-workspace-ai/build/
+ros2-workspace-ai/install/
+ros2-workspace-ai/log/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+.eggs/
+*.egg
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Assignment outputs
+*.pdf
+*.zip
+
+# Planner outputs
+ros2-workspace-ai/planner/output*
+ros2-workspace-ai/planner/sas_plan*
+ros2-workspace-ai/planner/*.log
+
+# ROS bags
+*.bag
+*.db3
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db

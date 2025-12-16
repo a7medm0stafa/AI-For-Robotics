@@ -1,4 +1,3 @@
-(pick phone livingroom)
-(move livingroom studyroom)
-(place phone studyroom)
-; cost = 3 (unit cost)
+(move storageroom diningroom)
+(move diningroom livingroom)
+; cost = 2 (unit cost)

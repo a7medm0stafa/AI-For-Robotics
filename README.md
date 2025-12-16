@@ -30,19 +30,23 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 
 **Note:** ROS2 launch files resolve paths from where you run the command, not from the package directory. Using `$PWD` or `$(pwd)` expands to the current directory, making it work regardless of your username.
 
-1. Wait for RViz2 to open
-2. Click "2D Pose Estimate" button
-3. Click and drag on the map at the robot's spawn location (living room at approximately `-2.65, 1.0`)
-4. This tells Nav2 where the robot is located
+### Terminal 3: Init Pose Node
+```bash
+cd ~/AI-For-Robotics/ros2-workspace-ai
+source install/setup.bash
+ros2 run tb3_planner_execution init_pose
+```
 
-### Terminal 3: TurtleBot Movement Node
+
+### Terminal 4: TurtleBot Movement Node
 ```bash
 cd ~/AI-For-Robotics/ros2-workspace-ai
 source install/setup.bash
 ros2 run tb3_planner_execution turtlebot_move
 ```
 
-### Terminal 4: Gripper Control Node
+
+### Terminal 5: Gripper Control Node
 ```bash
 cd ~/AI-For-Robotics/ros2-workspace-ai
 source install/setup.bash
@@ -52,14 +56,14 @@ ros2 run tb3_planner_execution gripper_control
 - Pick sequence: Arm down → Close gripper → Arm up
 - Place sequence: Arm down → Open gripper → Arm up
 
-### Terminal 5: Plan Executor Node
+### Terminal 6: Plan Executor Node
 ```bash
 cd ~/AI-For-Robotics/ros2-workspace-ai
 source install/setup.bash
 ros2 run tb3_planner_execution planner_executor --ros-args -p use_gripper:=true
 ```
 
-### Terminal 6: Planner CLI
+### Terminal 7: Planner CLI
 ```bash
 cd ~/AI-For-Robotics/ros2-workspace-ai
 python3 planner/planner_cli.py
