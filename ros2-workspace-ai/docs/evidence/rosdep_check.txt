@@ -1,7 +1,0 @@
-/usr/bin/rosdep:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
-  from pkg_resources import load_entry_point
-System dependencies have not been satisfied:
-apt	ros-jazzy-joint-state-publisher-gui
-apt	ros-jazzy-nav2-msgs
-apt	ros-jazzy-nav2-bringup
-apt	ros-jazzy-navigation2

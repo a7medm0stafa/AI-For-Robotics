@@ -14,5 +14,5 @@ def generate_launch_description():
     return LaunchDescription([
         *[DeclareLaunchArgument(k, default_value=v) for k,v in defaults.items()],
         IncludeLaunchDescription(PythonLaunchDescriptionSource(str(nav/'launch/bringup_launch.py')),
-                                 launch_arguments={**{k:LaunchConfiguration(k) for k in defaults}, 'autostart':'true', 'use_composition':'false'}.items()),
+                                 launch_arguments={**{k:LaunchConfiguration(k) for k in defaults}, 'autostart':'true', 'use_composition':'False'}.items()),
     ])

@@ -47,25 +47,22 @@ def main():
     parser.add_argument('--goal', help='robot-at ROOM | holding OBJECT | in-room OBJECT ROOM')
     parser.add_argument('--kb', type=Path, default=default_kb_path())
     parser.add_argument('--reset', action='store_true', help='Explicitly reset only after robot/object state is reconciled')
-    parser.add_argument('--planner', type=Path, default=Path(os.environ.get('FAST_DOWNWARD', ROOT/'.jazzy/downward/fast-downward.py')))
-    parser.add_argument('--output-dir', type=Path, default=ROOT/'.jazzy/plans')
+    parser.add_argument('--planner', type=Path, default=Path(os.environ.get('FAST_DOWNWARD', ROOT/'planner/downward/fast-downward.py')))
+    parser.add_argument('--output-dir', type=Path, default=ROOT/'planner/output')
     parser.add_argument('--timeout', type=float, default=30)
     parser.add_argument('--execute', action='store_true')
     parser.add_argument('--execution-timeout', type=float, default=1800)
     args = parser.parse_args()
-    try:
-        if args.reset:
-            with state_lock(args.kb):
-                journal_path = Path(str(args.kb)+'.execution.json')
-                journal = json.loads(journal_path.read_text()) if journal_path.exists() else {}
-                seen_ids = journal.get('seen_ids', [journal['id']] if journal.get('id') else [])
-                atomic_json(args.kb, deepcopy(DEFAULT_STATE))
-                atomic_json(journal_path, dict(status='succeeded', id=None, seen_ids=seen_ids, message='Explicit user reset'))
-            print(f'Reset {args.kb}; this does not move the robot.')
-        if not args.goal:
-            if not args.reset:
-                parser.error('--goal or --reset is required')
-            return 0
+    def reset():
+        with state_lock(args.kb):
+            journal_path = Path(str(args.kb)+'.execution.json')
+            journal = json.loads(journal_path.read_text()) if journal_path.exists() else {}
+            seen_ids = journal.get('seen_ids', [journal['id']] if journal.get('id') else [])
+            atomic_json(args.kb, deepcopy(DEFAULT_STATE))
+            atomic_json(journal_path, dict(status='succeeded', id=None, seen_ids=seen_ids, message='Explicit user reset'))
+        print(f'Reset {args.kb}; this does not move the robot.')
+
+    def run_goal(goal):
         if args.execute and not args.kb.exists():
             raise ValueError('Initialize matching robot/KB state explicitly with --reset first')
         if args.kb.exists():
@@ -73,17 +70,50 @@ def main():
                 state = load_state(args.kb)
         else:
             state = deepcopy(DEFAULT_STATE)
-        request, run = plan(state, parse_goal(args.goal), ROOT/'planner/domain.pddl', args.planner, args.output_dir, args.timeout)
+        request, run = plan(state, parse_goal(goal), ROOT/'planner/domain.pddl', args.planner, args.output_dir, args.timeout)
         print(json.dumps(request, indent=2))
         print(f'Artifacts: {run}')
         if args.execute:
-            # Executor checks the shared path; never transmit an arbitrary writable path.
             request['kb_path'] = str(args.kb.expanduser().resolve())
             return execute(request, args.execution_timeout)
         return 0
+
+    try:
+        if args.reset:
+            reset()
+        if args.goal:
+            return run_goal(args.goal)
+        if args.reset:
+            return 0
+        print('Mode: ' + ('plan and execute' if args.execute else 'planning only'))
+        print('Goals: robot-at ROOM | holding OBJECT | in-room OBJECT ROOM')
+        print('Commands: state, reset_kb (after robot reconciliation), help, quit')
+        while True:
+            try:
+                goal = input('Goal> ').strip()
+            except EOFError:
+                return 0
+            if goal in ('quit', 'exit'):
+                return 0
+            if goal == 'reset_kb':
+                reset()
+            elif goal == 'state':
+                with state_lock(args.kb):
+                    state = load_state(args.kb) if args.kb.exists() else DEFAULT_STATE
+                print(json.dumps(state, indent=2))
+            elif goal == 'help':
+                print('robot-at ROOM | holding OBJECT | in-room OBJECT ROOM; state, reset_kb, quit')
+            elif goal:
+                try:
+                    run_goal(goal)
+                except (OSError, ValueError, RuntimeError, TimeoutError) as exc:
+                    print(f'ERROR: {exc}', file=sys.stderr)
     except (OSError, ValueError, RuntimeError, TimeoutError) as exc:
         print(f'ERROR: {exc}', file=sys.stderr)
         return 1
+    except KeyboardInterrupt:
+        print('Interrupted. Inspect execution state before retrying.')
+        return 130
 
 
 if __name__ == '__main__':

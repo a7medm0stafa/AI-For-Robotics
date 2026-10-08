@@ -1,7 +1,7 @@
 ################################################################################
 # Set minimum required version of cmake, project name and compile options
 ################################################################################
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(turtlebot3_gazebo)
 
 if(NOT CMAKE_CXX_STANDARD)
@@ -20,62 +20,72 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
-find_package(gazebo REQUIRED)
-find_package(gazebo_ros_pkgs REQUIRED)
+find_package(ros_gz_sim REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
+find_package(gz_math_vendor REQUIRED)
+find_package(gz-math REQUIRED)
+find_package(gz_sim_vendor REQUIRED)
+find_package(gz-sim REQUIRED)
+find_package(gz_plugin_vendor REQUIRED)
+find_package(gz-plugin REQUIRED)
 
 ################################################################################
 # Build
 ################################################################################
 link_directories(
   ${GAZEBO_LIBRARY_DIRS}
+  ${GZ_SIM_LIBRARY_DIRS}
 )
 
 include_directories(
   include
   ${GAZEBO_INCLUDE_DIRS}
-)
-
-set(dependencies
-  "geometry_msgs"
-  "nav_msgs"
-  "rclcpp"
-  "sensor_msgs"
-  "tf2"
+  ${gz_sim_vendor_INCLUDE_DIRS}
+  ${GZ_SIM_INCLUDE_DIRS}
 )
 
 set(EXEC_NAME "turtlebot3_drive")
 
 add_executable(${EXEC_NAME} src/turtlebot3_drive.cpp)
-ament_target_dependencies(${EXEC_NAME} ${dependencies})
+target_link_libraries(${EXEC_NAME}
+  ${geometry_msgs_TARGETS}
+  ${nav_msgs_TARGETS}
+  ${sensor_msgs_TARGETS}
+  rclcpp::rclcpp
+  tf2::tf2
+)
 
-add_library(traffic_light_plugin SHARED src/traffic_light_plugin.cpp)
-target_link_libraries(traffic_light_plugin ${GAZEBO_LIBRARIES})
+set(OBSTACLE_LIBS
+  obstacles
+  obstacle1
+  obstacle2
+)
 
-add_library(traffic_bar_plugin SHARED src/traffic_bar_plugin.cpp)
-target_link_libraries(traffic_bar_plugin ${GAZEBO_LIBRARIES})
-
-add_library(obstacle1 SHARED src/obstacle1.cpp)
-target_link_libraries(obstacle1 ${GAZEBO_LIBRARIES})
-
-add_library(obstacle2 SHARED src/obstacle2.cpp)
-target_link_libraries(obstacle2 ${GAZEBO_LIBRARIES})
-
-add_library(obstacles SHARED src/obstacles.cpp)
-target_link_libraries(obstacles ${GAZEBO_LIBRARIES})
+foreach(lib ${OBSTACLE_LIBS})
+  add_library(${lib} SHARED src/${lib}.cpp)
+  target_link_libraries(${lib}
+    PUBLIC
+    gz-sim::gz-sim
+    gz-math::gz-math
+  )
+endforeach()
 
 ################################################################################
 # Install
 ################################################################################
-install(TARGETS ${EXEC_NAME}
+install(TARGETS
+  ${EXEC_NAME}
+  obstacles
+  obstacle1
+  obstacle2
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY launch models rviz urdf worlds
+install(DIRECTORY launch models params rviz urdf worlds
   DESTINATION share/${PROJECT_NAME}/
 )
 
@@ -87,10 +97,12 @@ install(DIRECTORY include/
 # Macro for ament package
 ################################################################################
 ament_export_include_directories(include)
-ament_export_dependencies(gazebo_ros_pkgs)
-ament_export_dependencies(geometry_msgs)
-ament_export_dependencies(nav_msgs)
-ament_export_dependencies(rclcpp)
-ament_export_dependencies(sensor_msgs)
-ament_export_dependencies(tf2)
+ament_export_dependencies(
+  gazebo_ros_pkgs
+  geometry_msgs
+  nav_msgs
+  rclcpp
+  sensor_msgs
+  tf2
+)
 ament_package()

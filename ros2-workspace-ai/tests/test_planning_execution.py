@@ -9,7 +9,7 @@ from tb3_planner_execution.planning import (DEFAULT_STATE, NoSolution, Incomplet
 from tb3_planner_execution.execution import execute_request
 
 ROOT = Path(__file__).resolve().parents[1]
-FD = ROOT/'.jazzy/downward/fast-downward.py'
+FD = ROOT/'planner/downward/fast-downward.py'
 
 
 @pytest.mark.parametrize('goal', ['robot-at bedroom', 'in-room cup bedroom', 'holding book', 'robot-at livingroom'])
@@ -149,3 +149,15 @@ def test_duplicate_id_after_intervening_success(tmp_path):
     assert execute_request(second, kb, lambda _: True)['success']
     result = execute_request(first, kb, lambda _: pytest.fail('Old UUID must not execute'))
     assert not result['success'] and 'Duplicate' in result['message']
+
+
+def test_interactive_cli_without_ros(tmp_path):
+    import os
+    import subprocess
+    process = subprocess.run([sys.executable, str(ROOT/'planner/planner_cli.py'),
+                              '--kb', str(tmp_path/'kb.json'), '--output-dir', str(tmp_path/'plans')],
+                             input='robot-at livingroom\nquit\n', text=True, capture_output=True,
+                             env={'PATH': '/usr/bin:/bin', 'HOME': str(tmp_path)}, timeout=30)
+    assert process.returncode == 0, process.stderr
+    assert 'planning only' in process.stdout and '"actions": []' in process.stdout
+    assert not (tmp_path/'kb.json').exists()

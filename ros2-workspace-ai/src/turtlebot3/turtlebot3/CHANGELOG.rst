@@ -2,6 +2,26 @@
 Changelog for package turtlebot3
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.3.7 (2026-06-15)
+------------------
+* Fixed an angle jump in IMU-based odometry when yaw wraps around ±π `#1141 <https://github.com/ROBOTIS-GIT/turtlebot3/issues/1141>`_ `#1142 <https://github.com/ROBOTIS-GIT/turtlebot3/pull/1142>`_
+* Contributors: Hyungyu Kim, MikeHallettUK, Ashutosh-177
+
+2.3.6 (2025-12-15)
+------------------
+* Fixed an issue where the reset trigger did not work correctly
+* Contributors: Hyungyu Kim
+
+2.3.5 (2025-12-09)
+------------------
+* Supported Pi Camera in Docker containers for TurtleBot3 with Humble and Jazzy
+* Contributors: Hyungyu Kim
+
+2.3.4 (2025-10-24)
+------------------
+* Supported Docker for TurtleBot3 with Humble and Jazzy
+* Contributors: Hyungyu Kim
+
 2.3.3 (2025-07-11)
 ------------------
 * Supported COIN D4 LIDAR(ld03)

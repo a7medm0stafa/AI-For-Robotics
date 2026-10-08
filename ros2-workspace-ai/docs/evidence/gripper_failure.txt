@@ -1,6 +1,0 @@
-Successfully switched controllers!
-Deactivated controllers: [ gripper_controller ]
-[INFO] [1791456751.912377941] [_ros2cli_23429]: waiting for service /controller_manager/switch_controller to become available...
-Successfully switched controllers!
-Activated controllers: [ gripper_controller ]
-{"success": false, "message": "ROS response timed out"}

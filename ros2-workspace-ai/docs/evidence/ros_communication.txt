@@ -1,9 +1,0 @@
-[INFO] [1791456781.301266437] [talker]: Publishing: 'Hello World: 1'
-[INFO] [1791456781.313082848] [listener]: I heard: [Hello World: 1]
-[INFO] [1791456782.301216286] [talker]: Publishing: 'Hello World: 2'
-[INFO] [1791456782.302779457] [listener]: I heard: [Hello World: 2]
-[INFO] [1791456783.301196020] [talker]: Publishing: 'Hello World: 3'
-[INFO] [1791456783.301942010] [listener]: I heard: [Hello World: 3]
-[INFO] [1791456784.301180194] [talker]: Publishing: 'Hello World: 4'
-[INFO] [1791456784.302045481] [listener]: I heard: [Hello World: 4]
-[INFO] [1791456784.997589698] [rclcpp]: signal_handler(SIGINT/SIGTERM)
