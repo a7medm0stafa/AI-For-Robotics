@@ -1,0 +1,44 @@
+controller_manager:
+  ros__parameters:
+    use_sim_time: true
+    update_rate: 100
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    diff_drive_controller:
+      type: diff_drive_controller/DiffDriveController
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    gripper_controller:
+      type: position_controllers/GripperActionController
+
+diff_drive_controller:
+  ros__parameters:
+    use_sim_time: true
+    left_wheel_names: [wheel_left_joint]
+    right_wheel_names: [wheel_right_joint]
+    wheel_separation: 0.288
+    wheel_radius: 0.033
+    publish_rate: 30.0
+    odom_frame_id: odom
+    base_frame_id: base_footprint
+    enable_odom_tf: true
+    cmd_vel_timeout: 0.5
+    position_feedback: true
+    open_loop: false
+arm_controller:
+  ros__parameters:
+    use_sim_time: true
+    joints: [joint1, joint2, joint3, joint4]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    allow_partial_joints_goal: false
+    constraints:
+      goal_time: 3.0
+      stopped_velocity_tolerance: 0.05
+gripper_controller:
+  ros__parameters:
+    use_sim_time: true
+    joint: gripper_left_joint
+    goal_tolerance: 0.001
+    allow_stalling: false
+    stall_timeout: 3.0

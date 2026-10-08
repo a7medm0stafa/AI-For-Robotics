@@ -1,0 +1,2 @@
+# Keep this legacy CRLF asset's geometric diff readable; CR is part of its EOL.
+src/tb3_planner_execution/models/tb3_house_custom/model.sdf whitespace=cr-at-eol

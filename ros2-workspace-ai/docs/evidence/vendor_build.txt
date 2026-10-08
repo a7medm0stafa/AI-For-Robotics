@@ -1,0 +1,12 @@
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+---
+Finished <<< turtlebot3_gazebo [45.0s]
+
+Summary: 4 packages finished [45.3s]
+  4 packages had stderr output: turtlebot3_description turtlebot3_gazebo turtlebot3_manipulation_description turtlebot3_msgs

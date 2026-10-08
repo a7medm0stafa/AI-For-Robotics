@@ -1,0 +1,10 @@
+[create-3] [INFO] [1791457304.939252788] [ros_gz_sim]: Entity creation successful.
+[gazebo-1] [Err] [Physics.cc:1801] Attempting to create a mimic constraint for joint [gripper_right_joint] but the chosen physics engine does not support mimic constraints, so no constraint will be created.
+[gazebo-1] libEGL warning: pci id for fd 99: 10de:2560, driver (null)
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: pci id for fd 99: 10de:2560, driver (null)
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: pci id for fd 99: 10de:2560, driver (null)
+[spawner-5] [INFO] [1791457311.961457971] [spawner_joint_state_broadcaster]: Configured and activated all the parsed controllers list : ['joint_state_broadcaster', 'diff_drive_controller', 'arm_controller', 'gripper_controller']!
+[gazebo-1] [INFO] [1791457463.443563682] [arm_controller]: Goal reached, success!
+[gazebo-1] [INFO] [1791457469.352228619] [arm_controller]: Goal reached, success!

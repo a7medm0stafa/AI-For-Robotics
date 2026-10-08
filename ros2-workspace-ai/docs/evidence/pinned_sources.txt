@@ -1,0 +1,8 @@
+/usr/bin/vcs:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import load_entry_point
+....
+=== .jazzy/vendor/src/turtlebot3 (git) ===
+=== .jazzy/vendor/src/turtlebot3_manipulation (git) ===
+=== .jazzy/vendor/src/turtlebot3_msgs (git) ===
+=== .jazzy/vendor/src/turtlebot3_simulations (git) ===
+All four vendor revisions match the manifest; no patches

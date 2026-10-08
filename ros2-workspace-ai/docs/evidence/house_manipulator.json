@@ -1,0 +1,36 @@
+[
+  {
+    "arm_target": [
+      0.0,
+      0.3,
+      0.5,
+      0.5
+    ],
+    "error_code": 0
+  },
+  {
+    "arm_target": [
+      0.0,
+      0.0,
+      0.0,
+      -0.1
+    ],
+    "error_code": 0
+  },
+  {
+    "gripper_target": -0.01,
+    "measured": [
+      -0.009990864481844839,
+      -0.009989785227854419
+    ],
+    "reached_goal": true
+  },
+  {
+    "gripper_target": 0.01,
+    "measured": [
+      0.009989853597156753,
+      0.009988654919033517
+    ],
+    "reached_goal": true
+  }
+]

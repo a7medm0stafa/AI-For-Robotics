@@ -1,0 +1,14 @@
+python3-colcon-core	0.20.1+upstream-1
+python3-rosdep	0.26.0-1
+python3-vcstool	0.3.0-1
+ros-jazzy-control-msgs	5.7.0-1noble.20260126.174741
+ros-jazzy-controller-manager	4.42.2-1noble.20260126.195504
+ros-jazzy-desktop	0.11.0-1noble.20260126.203157
+ros-jazzy-diff-drive-controller	4.36.0-1noble.20260126.195627
+ros-jazzy-gripper-controllers	4.36.0-1noble.20260126.195644
+ros-jazzy-gz-ros2-control	1.2.17-1noble.20260126.200019
+ros-jazzy-gz-sim-vendor	0.0.9-1noble.20260121.203533
+ros-jazzy-joint-trajectory-controller	4.36.0-1noble.20260126.195721
+ros-jazzy-rclpy	7.1.9-1noble.20260126.174822
+ros-jazzy-ros-gz-bridge	1.0.18-1noble.20260126.180325
+ros-jazzy-ros-gz-sim	1.0.18-1noble.20260126.180616

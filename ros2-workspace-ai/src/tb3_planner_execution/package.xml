@@ -1,23 +1,33 @@
-<?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>tb3_planner_execution</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>TA planning, navigation and manipulation references for the Jazzy robotics course</description>
   <maintainer email="ahm.mostafa03@gmail.com">ahmed</maintainer>
-  <license>TODO: License declaration</license>
-
+  <license>Apache-2.0</license>
   <depend>rclpy</depend>
   <depend>nav2_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>std_msgs</depend>
-
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
-
   <export>
     <build_type>ament_python</build_type>
   </export>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>lifecycle_msgs</exec_depend>
+  <exec_depend>tf2_ros_py</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>tb3_course_sim</exec_depend>
+  <exec_depend>turtlebot3_gazebo</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>navigation2</exec_depend>
 </package>

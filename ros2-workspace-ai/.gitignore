@@ -113,3 +113,6 @@ coverage.xml
 # Maps
 *.pgm.backup
 *.yaml.backup
+
+# Isolated Jazzy dependencies, snapshots, builds and runtime outputs
+.jazzy/

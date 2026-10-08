@@ -1,0 +1,27 @@
+{
+  "os": "Ubuntu 24.04.4 LTS",
+  "architecture": "x86_64",
+  "python": "3.12.3",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cmake": "cmake version 4.2.1",
+  "branch": "jazzy",
+  "remote": "https://github.com/a7medm0stafa/AI-For-Robotics.git",
+  "base_commit": "44bd8b6",
+  "active_vendor_packages": [
+    "turtlebot3_description",
+    "turtlebot3_msgs",
+    "turtlebot3_gazebo",
+    "turtlebot3_manipulation_description"
+  ],
+  "snapshots_match": {
+    "kb_state.json": true,
+    "problem.pddl": true,
+    "sas_plan": true
+  },
+  "map_unchanged": {
+    "map.yaml": true,
+    "map.pgm": true
+  },
+  "house_collision_count": 107,
+  "house_collisions_unchanged": true
+}

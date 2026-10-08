@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<robot name="tb3_course" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Use upstream geometry and URDF mimic semantics; do not include Classic plugins. -->
+  <xacro:include filename="$(find turtlebot3_manipulation_description)/gazebo/materials.xacro"/>
+  <xacro:include filename="$(find turtlebot3_manipulation_description)/urdf/turtlebot3_waffle_pi.urdf.xacro"/>
+  <xacro:include filename="$(find turtlebot3_manipulation_description)/urdf/open_manipulator_x.urdf.xacro"/>
+  <xacro:turtlebot3_waffle_pi prefix=""/>
+  <xacro:open_manipulator_x prefix=""/>
+  <joint name="base_fixed" type="fixed"><parent link="base_link"/><child link="link1"/><origin xyz="-0.092 0 0.091"/></joint>
+  <xacro:macro name="controlled_joint" params="name interface initial:=0.0">
+    <joint name="${name}"><command_interface name="${interface}"/>
+      <state_interface name="position"><param name="initial_value">${initial}</param></state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </xacro:macro>
+  <ros2_control name="CourseGazeboSystem" type="system">
+    <hardware><plugin>gz_ros2_control/GazeboSimSystem</plugin></hardware>
+    <xacro:controlled_joint name="wheel_left_joint" interface="velocity"/>
+    <xacro:controlled_joint name="wheel_right_joint" interface="velocity"/>
+    <xacro:controlled_joint name="joint1" interface="position"/>
+    <xacro:controlled_joint name="joint2" interface="position"/>
+    <xacro:controlled_joint name="joint3" interface="position"/>
+    <xacro:controlled_joint name="joint4" interface="position" initial="-0.1"/>
+    <xacro:controlled_joint name="gripper_left_joint" interface="position" initial="0.01"/>
+    <joint name="gripper_right_joint"><state_interface name="position"/><state_interface name="velocity"/></joint>
+  </ros2_control>
+  <gazebo><plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+    <parameters>$(find tb3_course_sim)/config/controllers.yaml</parameters>
+    <ros><remapping>/diff_drive_controller/cmd_vel:=/cmd_vel</remapping><remapping>/diff_drive_controller/odom:=/odom</remapping></ros>
+  </plugin></gazebo>
+  <gazebo reference="wheel_left_link"><mu1>1.0</mu1><mu2>1.0</mu2></gazebo>
+  <gazebo reference="wheel_right_link"><mu1>1.0</mu1><mu2>1.0</mu2></gazebo>
+  <gazebo reference="caster_back_left_link"><mu1>0.001</mu1><mu2>0.001</mu2></gazebo>
+  <gazebo reference="caster_back_right_link"><mu1>0.001</mu1><mu2>0.001</mu2></gazebo>
+  <gazebo reference="base_scan">
+    <sensor name="lidar" type="gpu_lidar"><always_on>true</always_on><update_rate>10</update_rate>
+      <topic>scan</topic><gz_frame_id>base_scan</gz_frame_id>
+      <lidar><scan><horizontal><samples>360</samples><resolution>1</resolution><min_angle>-3.14159265</min_angle><max_angle>3.14159265</max_angle></horizontal></scan>
+        <range><min>0.12</min><max>10</max><resolution>0.01</resolution></range></lidar>
+    </sensor>
+  </gazebo>
+</robot>

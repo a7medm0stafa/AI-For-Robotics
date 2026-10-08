@@ -1,0 +1,5 @@
+repositories:
+  downward:
+    type: git
+    url: https://github.com/aibasel/downward.git
+    version: 1eef26b2cbf599a1894606aa898d9d49e1034cb9

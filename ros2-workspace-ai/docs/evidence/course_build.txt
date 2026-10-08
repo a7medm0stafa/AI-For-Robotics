@@ -1,0 +1,6 @@
+Starting >>> tb3_course_sim
+Finished <<< tb3_course_sim [0.05s]
+Starting >>> tb3_planner_execution
+Finished <<< tb3_planner_execution [1.56s]
+
+Summary: 2 packages finished [1.81s]

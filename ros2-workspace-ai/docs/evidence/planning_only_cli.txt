@@ -1,0 +1,55 @@
+{
+  "id": "bcc1f81d-b67a-46a3-bd3e-a1c59d754307",
+  "initial_state": {
+    "robot_location": "livingroom",
+    "holding": null,
+    "gripper_state": "open",
+    "objects": {
+      "cup": "diningroom",
+      "book": "studyroom",
+      "remote": "livingroom",
+      "phone": "livingroom",
+      "panadol": "bedroom",
+      "pillow": "bedroom",
+      "chewy": "storageroom"
+    }
+  },
+  "goal": [
+    "in-room",
+    "cup",
+    "bedroom"
+  ],
+  "actions": [
+    [
+      "move",
+      "livingroom",
+      "diningroom"
+    ],
+    [
+      "pick",
+      "cup",
+      "diningroom"
+    ],
+    [
+      "move",
+      "diningroom",
+      "livingroom"
+    ],
+    [
+      "move",
+      "livingroom",
+      "studyroom"
+    ],
+    [
+      "move",
+      "studyroom",
+      "bedroom"
+    ],
+    [
+      "place",
+      "cup",
+      "bedroom"
+    ]
+  ]
+}
+Artifacts: /home/ahmed/AI-For-Robotics/ros2-workspace-ai/.jazzy/plans/plan-ufin8ild

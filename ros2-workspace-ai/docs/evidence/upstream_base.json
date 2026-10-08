@@ -1,0 +1,12 @@
+{
+  "distance_m": 0.24115000000020215,
+  "rotation_rad": 0.6954008976088891,
+  "stopped_linear": 0.0,
+  "stopped_angular": 0.0,
+  "laser_samples": 360,
+  "joint_names": [
+    "wheel_left_joint",
+    "wheel_right_joint"
+  ],
+  "clock_sec": 17
+}
